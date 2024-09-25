@@ -6,12 +6,23 @@
 
 .body {
     height: 100vh;
+
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-#square {
+.squares{
+    /* display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    column-gap: 25px;
+    row-gap: 25px; */
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
     height: 200px;
     width: 200px;
     border: 1px solid black;
@@ -21,4 +32,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 10px;
 }
