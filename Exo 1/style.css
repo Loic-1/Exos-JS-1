@@ -4,10 +4,21 @@
     box-sizing: border-box;
   }
 
+.body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #square{
     height: 200px;
     width: 200px;
     border: 1px solid black;
     color: beige;
     background-color: cadetblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
