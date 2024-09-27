@@ -1,16 +1,26 @@
-const square_1 = document.getElementById("square_1");
+const squares = document.querySelectorAll(".square");
 
-var verif = false;
+let currentPlayer = "X";
 
-square_1.addEventListener("click", () => {
-    verif = verif == true ? false : true;
-    // alert(verif);
-    var change_1 = true;
-    if (change_1) {
-        square_1.innerText = verif == false ? "O" : "X";
-        change_1 = false;
+let movesCount = 0;
+
+const message = document.getElementById("message");
+
+squares.forEach((square) => {
+  square.addEventListener("click", () => {
+    if (square.innerText !== "") {
+      return;
     }
-    else {
-        //rien
+
+    square.innerText = currentPlayer;
+
+    movesCount++;
+
+    if (movesCount === 9) {
+      message.innerText = "Partie terminée !!";
+    } else {
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      message.innerText = `C'est au tour de ${currentPlayer}`;
     }
+  });
 });
