@@ -13,7 +13,6 @@ squares.forEach((square) => {
     }
 
     square.innerText = currentPlayer;
-
     movesCount++;
 
     if (movesCount === 9) {
