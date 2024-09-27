@@ -1,19 +1,18 @@
-
+//https://css-tricks.com/snippets/javascript/random-hex-color/
 
 const square = document.querySelector(".square");
 const squareContainer = document.querySelector("#squares");
 
 const _square = document.getElementById("#_square");
 
-var randomColor = Math.floor(Math.random() * 16777215).toString(16);//https://css-tricks.com/snippets/javascript/random-hex-color/
-// alert("#"+ randomColor);
 
 document.addEventListener('keydown', function (event) {
     const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
     switch (key) {
         case "ArrowUp":
             // alert("up");
-            delSquare(square); //delSquare(square);
+            let last = squareContainer.lastChild
+            delSquare(last);
             break;
         case "ArrowDown":
             // alert("down");
@@ -24,25 +23,18 @@ document.addEventListener('keydown', function (event) {
 
 
 function addSquare() {
-    const newSquare = square.cloneNode(true);
+    const newSquare = square.cloneNode(false);
 
-    document.addEventListener('keydown', function (event) {
-        const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
-        switch (key) {
-            case "ArrowUp":
-                newSquare.parentNode.removeChild(newSquare);
-                break;
-        }
-    });
-
-    // var randomColor = Math.floor(Math.random() * 16777215).toString(16);//https://css-tricks.com/snippets/javascript/random-hex-color/
-
-    // document.body.style.backgroundColor = "#" + randomColor;
+    var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    if (squareContainer.childElementCount != 0) {
+        alert(randomColor);
+        document.querySelector(".square").style.background = "#" + randomColor;
+    }
 
     squareContainer.appendChild(newSquare);
 };
 
 
-// function delSquare(square) {
-//     square.remove;
-// };
+function delSquare(toDelete) {
+    squareContainer.removeChild(toDelete);
+};
