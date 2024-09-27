@@ -2,6 +2,7 @@
 
 const square = document.querySelector(".square");
 const squareContainer = document.querySelector("#squares");
+const color = document.getElementById("color");
 
 const _square = document.getElementById("#_square");
 
@@ -21,13 +22,19 @@ document.addEventListener("keydown", function (event) {
 });
 
 function addSquare() {
-  const newSquare = document.createElement("div"); //merci intern
+  const newSquare = document.createElement("div"); //merci internetF
   newSquare.classList.add("square"); //merci internet
 
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   newSquare.style.background = "#" + randomColor;
 
+  color.innerText = "#" + randomColor;
+
   squareContainer.appendChild(newSquare);
+
+  newSquare.addEventListener("click", () => {
+    newSquare.style.background = "black";
+  });
 }
 
 function delSquare(toDelete) {

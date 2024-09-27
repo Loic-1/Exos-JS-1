@@ -6,11 +6,19 @@
 
 .body {
     padding: 5px;
+
+    display: flex;
+}
+
+.aside {
+    margin-left: 15px;
 }
 
 #squares {
     display: flex;
     flex-wrap: wrap;
+    width: 915px;
+    /* 15*600px + 15px de left-margin */
 }
 
 .square {
