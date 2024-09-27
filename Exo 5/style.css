@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #a0bdc9;
+}
+
+.blur{
+    outline: 1px solid black;
+    
+    height: 30vh;
+    width: 25%;
+    /* filter: blur(4px); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    background-color: #1AB9F7;
+}
+
+.inside{
+    width: 80%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inside label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inside label, .inside input, .inside #output{
+    margin: 10px;
+}
