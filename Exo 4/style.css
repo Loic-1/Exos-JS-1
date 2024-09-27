@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    padding: 5px;
+}
+
+#squares {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    outline: 1px solid;
+    margin-top: 1px;
+    margin-left: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
