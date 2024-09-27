@@ -12,6 +12,11 @@
     align-items: center;
 
     background-color: #a0bdc9;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    z-index: -1;
 }
 
 .blur{
@@ -25,9 +30,7 @@
     justify-content: center;
     align-items: center;
 
-
-
-    background-color: #1AB9F7;
+    z-index: 0;
 }
 
 .inside{
@@ -37,6 +40,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    z-index: 1;
 }
 
 .inside label{
