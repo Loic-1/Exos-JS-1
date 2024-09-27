@@ -28,7 +28,7 @@ function addSquare() {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   newSquare.style.background = "#" + randomColor;
 
-  color.innerText = "#" + randomColor;
+  color.innerText = "\nCurrent color :\n#" + randomColor;
 
   squareContainer.appendChild(newSquare);
 

@@ -8,6 +8,8 @@
     padding: 5px;
 
     display: flex;
+
+    height: max-content;
 }
 
 .aside {
@@ -19,6 +21,7 @@
     flex-wrap: wrap;
     width: 915px;
     /* 15*600px + 15px de left-margin */
+    height: max-content;
 }
 
 .square {
