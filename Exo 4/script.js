@@ -5,36 +5,31 @@ const squareContainer = document.querySelector("#squares");
 
 const _square = document.getElementById("#_square");
 
-
-document.addEventListener('keydown', function (event) {
-    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
-    switch (key) {
-        case "ArrowUp":
-            // alert("up");
-            let last = squareContainer.lastChild
-            delSquare(last);
-            break;
-        case "ArrowDown":
-            // alert("down");
-            addSquare();
-            break;
-    }
+document.addEventListener("keydown", function (event) {
+  const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+  switch (key) {
+    case "ArrowUp":
+      // alert("up");
+      let last = squareContainer.lastChild;
+      delSquare(last);
+      break;
+    case "ArrowDown":
+      // alert("down");
+      addSquare();
+      break;
+  }
 });
 
-
 function addSquare() {
-    const newSquare = square.cloneNode(false);
+  const newSquare = document.createElement("div"); //merci intern
+  newSquare.classList.add("square"); //merci internet
 
-    var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    if (squareContainer.childElementCount != 0) {
-        alert(randomColor);
-        document.querySelector(".square").style.background = "#" + randomColor;
-    }
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  newSquare.style.background = "#" + randomColor;
 
-    squareContainer.appendChild(newSquare);
-};
-
+  squareContainer.appendChild(newSquare);
+}
 
 function delSquare(toDelete) {
-    squareContainer.removeChild(toDelete);
-};
+  squareContainer.removeChild(toDelete);
+}
